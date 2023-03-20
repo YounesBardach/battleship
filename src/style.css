@@ -32,9 +32,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(https://www.nicepng.com/png/detail/13-131178_download-emoji-monkey-no-evil-3-pk.png);
-  background-position: center;
-  background-size: cover;
+  background-color: gray;
   visibility: hidden;
   transform: scale(0);
   transition: ease 0.4s;

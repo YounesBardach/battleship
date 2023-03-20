@@ -14,8 +14,10 @@ const indicator = document.querySelector(".indicator");
 const playerTwoTitle = document.querySelector(".player-two");
 const hideButtonOne = document.querySelector(".hide-button-one");
 const hideButtonTwo = document.querySelector(".hide-button-two");
-const modalTwo = document.querySelector(".modal-two");
-const modalThree = document.querySelector(".modal-three");
+const createdModalOne = document.createElement('div')
+const createdModalTwo = document.createElement('div')
+createdModalOne.classList.add('modal-two')
+createdModalTwo.classList.add('modal-three')
 
 let GameboardOne;
 let GameboardTwo;
@@ -379,6 +381,8 @@ const reseter = () => {
   containerTwo.innerHTML = "";
   selectionContainerOne.innerHTML = "";
   selectionContainerTwo.innerHTML = "";
+  selectionContainerOne.appendChild(createdModalOne)
+  selectionContainerTwo.appendChild(createdModalTwo)
   selectionContainerOne.classList.remove("disabled");
   selectionContainerTwo.classList.remove("disabled");
   containerOne.classList.remove("red-border", "disabled");
@@ -386,7 +390,7 @@ const reseter = () => {
 };
 
 const initiateGame = () => {
-  reseter()
+  reseter();
   GameboardOne = gameboardMaker();
   GameboardTwo = gameboardMaker();
   playerOne = playerMaker();
@@ -433,22 +437,22 @@ modal.addEventListener("click", (e) => {
 
 hideButtonOne.addEventListener("click", () => {
   if (hideButtonOne.textContent === `Hide`) {
-    modalTwo.classList.add("scale-visible");
+    createdModalOne.classList.add("scale-visible");
     hideButtonOne.textContent = `Show`;
   } else {
-    modalTwo.classList.remove("scale-visible");
+    createdModalOne.classList.remove("scale-visible");
     hideButtonOne.textContent = `Hide`;
   }
 });
 
 hideButtonTwo.addEventListener("click", () => {
   if (hideButtonTwo.textContent === `Hide`) {
-    modalThree.classList.add("scale-visible");
+    createdModalTwo.classList.add("scale-visible");
     hideButtonTwo.textContent = `Show`;
   } else {
-    modalThree.classList.remove("scale-visible");
+    createdModalTwo.classList.remove("scale-visible");
     hideButtonTwo.textContent = `Hide`;
   }
 });
 
-export {populateSquare};
+export default { populateSquare };
