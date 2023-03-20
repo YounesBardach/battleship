@@ -379,6 +379,8 @@ const reseter = () => {
   containerTwo.innerHTML = "";
   selectionContainerOne.innerHTML = "";
   selectionContainerTwo.innerHTML = "";
+  selectionContainerOne.classList.remove("disabled");
+  selectionContainerTwo.classList.remove("disabled");
   containerOne.classList.remove("red-border", "disabled");
   containerTwo.classList.remove("red-border", "disabled");
 };
@@ -449,4 +451,4 @@ hideButtonTwo.addEventListener("click", () => {
   }
 });
 
-export default populateSquare;
+export {populateSquare};

@@ -262,6 +262,17 @@ Create .babelrc and add:
 
 npm test to test
 npm run test -- --watch (watch mode)
+
+Mocking document elements:
+
+  npm install -D jest-environment-jsdom
+
+  Use at the top of the test document:
+  
+/**
+ * @jest-environment ./src/test/my-custom-environment
+ */
+
 //
 
 Useful libraries:
