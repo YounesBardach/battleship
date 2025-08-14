@@ -43,7 +43,8 @@ Built as part of The Odin Project's Battleship lesson.
 - Lesson:
   [The Odin Project — Project: Battleship](https://www.theodinproject.com/lessons/node-path-javascript-battleship)
 
-Hosted at: [https://younesbardach.github.io/battleship/](https://younesbardach.github.io/battleship/)
+- Hosted at:
+  [https://younesbardach.github.io/battleship/](https://younesbardach.github.io/battleship/)
 
 ## Features
 
